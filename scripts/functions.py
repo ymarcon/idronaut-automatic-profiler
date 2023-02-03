@@ -14,6 +14,6 @@ def copy_files(outfolder, infolder):
     for file in files:
         if "status" not in file and not os.path.isfile(os.path.join(outfolder, file)) and ".txt" in file:
             copyfile(os.path.join(infolder, file), os.path.join(outfolder, file))
-            copied.append(file)
+            copied.append(os.path.join(outfolder, file))
     return copied
 

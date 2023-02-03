@@ -408,6 +408,9 @@ def maintenance(folder, file=False, datalakes=[], periods=[], time_label="time")
                          "stop": datetime.strptime(period["endtime"], '%Y-%m-%dT%H:%M:%S.%fZ').timestamp(),
                          "parameter": period["parseparameter"]})
 
+    if len(periods) == 0:
+        return []
+
     reprocess = []
     files = [os.path.join(folder, f) for f in os.listdir(folder)]
     files.sort()

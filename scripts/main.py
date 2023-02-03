@@ -22,12 +22,10 @@ if len(sys.argv) == 1:
     files.sort()
     log.info("Reprocessing complete dataset from {}".format(directories["Level0"]))
 elif len(sys.argv) == 2:
-    files = copy_files(os.path.join(directories["Level0_dir"], "Deployment2"), directories["Raw"])
+    files = copy_files(os.path.join(directories["Level0"], "Deployment2"), directories["Raw"])
     log.info("Live processing {} files.".format(len(files)))
 
 log.end_stage()
-
-# files = ["data/Level0/Deployment2/2023-01-28@19.13.11.txt"]
 
 log.begin_stage("Processing data to L1")
 for file in files:
