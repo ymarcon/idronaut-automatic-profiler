@@ -1,6 +1,5 @@
 import os
 import sys
-import boto3
 import argparse
 from subprocess import check_output, Popen, PIPE
 
