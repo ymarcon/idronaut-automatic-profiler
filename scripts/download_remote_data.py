@@ -41,7 +41,7 @@ def download_remote_data(warning=True, delete=False):
     try:
         check_output(["aws", "s3", "ls", bucket_uri])
     except:
-        raise ValueError("Unable to download, {} does not exist.".format(bucket_uri))
+        raise ValueError("Unable to download, {} does not exist or you do not have to AWS CLI installed.".format(bucket_uri))
 
     print("Attempting to sync {} with {}".format(bucket_uri, data_folder))
 
