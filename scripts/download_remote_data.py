@@ -1,6 +1,5 @@
 import os
 import sys
-import boto3
 import argparse
 from subprocess import check_output, Popen, PIPE
 
@@ -15,10 +14,19 @@ def download_remote_data(warning=True, delete=False):
     if not os.path.isdir(data_folder):
         raise ValueError("{} not found. data folder is required to sync data.".format(data_folder))
 
-    remote = str(check_output(["git", "remote", "-v"])).split("@", 1)[1].split(".git", 1)[0].split(":")
-    host = remote[0]
-    group = remote[1].split("/")[0]
-    repository = remote[1].split("/")[1]
+    remote = str(check_output(["git", "remote", "-v"]))
+    if "git@" in remote:
+        remote = str(check_output(["git", "remote", "-v"])).split("git@", 1)[1].split(".git", 1)[0].split(":")
+        host = remote[0]
+        group = remote[1].split("/")[0]
+        repository = remote[1].split("/")[1]
+    elif "https://" in remote:
+        remote = str(check_output(["git", "remote", "-v"])).split("https://", 1)[1].split(".git", 1)[0].split("/")
+        host = remote[0]
+        group = remote[-2]
+        repository = remote[-1]
+    else:
+        raise ValueError("Unrecognized output from git remote -v: {}".format(remote))
 
     if warning and host not in hosts:
         raise ValueError("Host {} not recognised. Please select from {} or edit the function to accept your host."
@@ -31,14 +39,14 @@ def download_remote_data(warning=True, delete=False):
     bucket_uri = "s3://{}/{}/{}/{}/data".format(bucket_name, host, group, repository)
 
     try:
-        check_output(["aws", "s3", "ls", bucket_uri])
+        check_output(["aws", "s3", "ls", bucket_uri, "--no-sign-request"])
     except:
-        raise ValueError("Unable to download, {} does not exist.".format(bucket_uri))
+        raise ValueError("Unable to download, {} does not exist or you do not have to AWS CLI installed.".format(bucket_uri))
 
     print("Attempting to sync {} with {}".format(bucket_uri, data_folder))
 
     if warning:
-        dry_run = check_output(["aws", "s3", "sync", bucket_uri, data_folder, "--dryrun"]).decode('ASCII')
+        dry_run = check_output(["aws", "s3", "sync", bucket_uri, data_folder, "--dryrun", "--no-sign-request"]).decode('ASCII')
         if len(dry_run) == 0:
             print("{} is up to date.".format(bucket_uri))
             return
@@ -49,9 +57,9 @@ def download_remote_data(warning=True, delete=False):
             return
 
     if delete:
-        process = Popen(["aws", "s3", "sync", bucket_uri, data_folder, "--delete"], stdout=PIPE)
+        process = Popen(["aws", "s3", "sync", bucket_uri, data_folder, "--delete", "--no-sign-request"], stdout=PIPE)
     else:
-        process = Popen(["aws", "s3", "sync", bucket_uri, data_folder], stdout=PIPE)
+        process = Popen(["aws", "s3", "sync", bucket_uri, data_folder, "--no-sign-request"], stdout=PIPE)
     while True:
         output = process.stdout.readline()
         if process.poll() is not None:
