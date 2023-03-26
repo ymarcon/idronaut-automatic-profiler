@@ -75,7 +75,7 @@ class IdronautD1(GenericInstrument):
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
         }
-        self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 60, 60)))
+        self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 90, 60)))
 
     def read_data(self, file):
         self.log.info("Reading data from {}".format(file), 1)
@@ -162,7 +162,7 @@ class IdronautD2(GenericInstrument):
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
         }
-        self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 60, 60)))
+        self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 90, 60)))
 
     def read_data(self, file):
         self.log.info("Reading data from {}".format(file), 1)
