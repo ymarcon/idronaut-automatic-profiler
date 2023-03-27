@@ -12,6 +12,7 @@ call "scripts\input_batch.bat"
 %pythonenv% %upload% -w
 
 curl "https://api.datalakes-eawag.ch/update/667"
+timeout 20
 curl "https://api.datalakes-eawag.ch/update/666"
 
 
