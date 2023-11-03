@@ -47,8 +47,8 @@ class IdronautD1(GenericInstrument):
                     'long_name': 'photosynthetically active radiation'},
             'Chl': {'var_name': 'Chl', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
             'Chl2': {'var_name': 'Chl2', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
-            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
+            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('time',), 'unit': '', 'long_name': 'phycoerythrin'},
+            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
 
         self.grid_dimensions = {
@@ -72,8 +72,8 @@ class IdronautD1(GenericInstrument):
                     'long_name': 'photosynthetically active radiation'},
             'Chl': {'var_name': 'Chl', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
             'Chl2': {'var_name': 'Chl2', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
-            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
+            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
+            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
         self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 90, 60)))
 
@@ -132,8 +132,8 @@ class IdronautD2(GenericInstrument):
                     'long_name': 'photosynthetically active radiation'},
             'Chl': {'var_name': 'Chl', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
             'Chl2': {'var_name': 'Chl2', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
-            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
+            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('time',), 'unit': '', 'long_name': 'phycoerythrin'},
+            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
 
         self.grid_dimensions = {
@@ -159,8 +159,8 @@ class IdronautD2(GenericInstrument):
                     'long_name': 'photosynthetically active radiation'},
             'Chl': {'var_name': 'Chl', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
             'Chl2': {'var_name': 'Chl2', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycoerythrin'},
-            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'phycocyanin'}
+            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
+            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
         self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 90, 60)))
 
