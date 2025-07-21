@@ -2,7 +2,7 @@
 import os
 import sys
 import yaml
-from instruments import IdronautD1, IdronautD2
+from instruments import IdronautD1, IdronautD2, IdronautD3
 from general.functions import logger, maintenance, files_in_directory
 from functions import copy_files
 
@@ -22,7 +22,7 @@ if len(sys.argv) == 1:
     files.sort()
     log.info("Reprocessing complete dataset from {}".format(directories["Level0"]))
 elif len(sys.argv) == 2:
-    files = copy_files(os.path.join(directories["Level0"], "Deployment2"), directories["Raw"])
+    files = copy_files(os.path.join(directories["Level0"], "Deployment3"), directories["Raw"])
     log.info("Live processing {} files.".format(len(files)))
 
 log.end_stage()
@@ -36,6 +36,10 @@ for file in files:
         deployment = "D2"
         interpolate = True
         sensor = IdronautD2(log=log)
+    elif "Deployment3" in file:
+        deployment = "D3"
+        interpolate = True
+        sensor = IdronautD3(log=log)
     else:
         continue
 
@@ -55,6 +59,8 @@ for file in effected_files:
         sensor = IdronautD1(log=log)
     elif deployment == "D2":
         sensor = IdronautD2(log=log)
+    elif deployment == "D3":
+        sensor = IdronautD3(log=log)
     else:
         continue
     sensor.read_netcdf_data(file)
