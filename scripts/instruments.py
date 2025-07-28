@@ -5,8 +5,6 @@ import json
 import warnings
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 from scipy.interpolate import griddata
 from datetime import datetime, timedelta, timezone
 from general.functions import GenericInstrument, json_converter
@@ -72,6 +70,7 @@ class Idronaut(GenericInstrument):
             'PAR': {'var_name': 'PAR', 'dim': ('Press', 'time',), 'unit': 'Wm-2',
                     'long_name': 'photosynthetically active radiation'},
             'Chl': {'var_name': 'Chl', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
+            'Turb': {'var_name': 'Turb', 'dim': ('Press', 'time',), 'unit': 'FTU', 'long_name': 'Turbidity'},
             'Chl2': {'var_name': 'Chl2', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
@@ -84,6 +83,9 @@ class IdronautD1(Idronaut):
         self.log.info("Reading data from {}".format(file), 1)
         try:
             df = pd.read_csv(file, delim_whitespace=True)
+            if len(df) < 10:
+                self.log.info("File too short, skipping.".format(file), 2)
+                return False
             df.columns = ['Press', 'Temp', 'Cond', 'Sal', 'O2%', 'O2ppm', 'pH', 'eH', 'PAR', 'OPTO%', 'OPTOppm', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df = df.sort_values(by=['time'])
@@ -96,7 +98,7 @@ class IdronautD1(Idronaut):
                     self.data[variable] = empty.copy()
         except Exception as e:
             self.log.info("Failed to read data from {}".format(file), indent=1)
-            raise e
+            return False
         return True
 
 
@@ -105,6 +107,9 @@ class IdronautD2(Idronaut):
         self.log.info("Reading data from {}".format(file), 1)
         try:
             df = pd.read_csv(file, delim_whitespace=True)
+            if len(df) < 10:
+                self.log.info("File too short, skipping.".format(file), 2)
+                return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df = df.sort_values(by=['time'])
@@ -119,7 +124,7 @@ class IdronautD2(Idronaut):
                     self.data[variable] = empty.copy()
         except Exception as e:
             self.log.info("Failed to read data from {}".format(file), indent=1)
-            raise e
+            return False
         return True
 
 
@@ -128,6 +133,9 @@ class IdronautD3(Idronaut):
         self.log.info("Reading data from {}".format(file), 1)
         try:
             df = pd.read_csv(file, delim_whitespace=True)
+            if len(df) < 10:
+                self.log.info("File too short, skipping.".format(file), 2)
+                return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Turb', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df = df.sort_values(by=['time'])
@@ -142,5 +150,5 @@ class IdronautD3(Idronaut):
                     self.data[variable] = empty.copy()
         except Exception as e:
             self.log.info("Failed to read data from {}".format(file), indent=1)
-            raise e
+            return False
         return True
