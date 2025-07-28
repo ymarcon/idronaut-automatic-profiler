@@ -60,19 +60,25 @@ Data ranging from 0m to approx. 60m depth. The profiler is located in the LéXPL
 
 ## Usage
 
-### Process new data
+### Reprocess data
 
-In order to process new data locally on your machine the file path needs to be adapted to your local file system. The following steps are therefore necessary: 
+To reprocess data you can run the following command:
 
-- Edit the `scripts/input_batch.bat` file. Change all the directory paths to match your local file system. This file contains all the file paths necessary to launch the batch scripts `runfile.bat`.
+`python scripts/main.py`
 
-- Edit the `scripts/input_python.py` file. Change all the directory paths to match your local file system. This file contains all the directories where the python script outputs data to.
+It is recommended to delete the Level1 and Level2 folders in data before running any reprocessing.
 
-To process new data, place the data in the input directory which you specified in the `scripts/input_batch.bat` file. Double-clicking on the `runfile.bat` file will automaticall process all the data in the input directory and store the output in the directories specified in the `scripts/input_python.py` file.
+### Live data
 
-### Adapt/Extend data processing piepeline
+In order to process live data you need to copy `creds_example.json` to `creds.json` and complete the ftp credentials. You can then run:
 
-The python script `scripts/main.py` defines the different processing steps while the python script `scripts/intruments.py` contains the python classes for each iteration of the idronaut setup with all the corresponding class methods to process the data. To add a new processing or visualization step, a new class method can be created in the `instruments.py` file and the step can be added in `main.py` file. Both above mentioned python scripts are independent of the local file system.
+`python scripts/main.py -s`
+
+### Adapt/Extend data processing pipeline
+
+The python script `scripts/main.py` defines the different processing steps while the python script `scripts/instruments.py` contains the python class TemperatureChain with all the corresponding 
+class methods to process the data. To add a new processing or visualization step, a new class method can be created in the `instruments.py` file and the step can be added in `main.py` file.
+Both above mentioned python scripts are independent of the local file system.
 
 ## Data
 

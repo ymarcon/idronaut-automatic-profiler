@@ -78,7 +78,7 @@ class GenericInstrument:
                             time = np.array(self.data[time_label])
                             if key in period["parameter"]:
                                 qa[np.logical_and(time > period["start"], time < period["stop"])] = 1
-                        self.data[name] = qa
+                    self.data[name] = qa
 
     def mask_outside_water_and_upcast_ctd(self, rolling=3, diff=0.01, var="Cond", depth="Press", max_depth_cut=3.0):
         self.log.info("Masking data from outside water and the upcast.", 2)

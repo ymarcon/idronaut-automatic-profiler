@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 import sys
-import yaml
 import json
 import time
 import argparse
@@ -18,13 +17,12 @@ def pipeline(download=False, process=False, reprocess=False, logs=False, upload=
     failed = False
     if process:
         try:
-            edited_files = main(not reprocess, logs, upload or uploadfiles)
+            edited_files = main(not reprocess, logs)
         except Exception as e:
             print("Processing failed")
             failed = True
             if reprocess:
                 raise
-
 
     if upload or (uploadfiles and failed):
         print("Upload sync with remote bucket")
@@ -37,6 +35,9 @@ def pipeline(download=False, process=False, reprocess=False, logs=False, upload=
         for index, datalakes_id in enumerate(datalakes):
             requests.get("https://api.datalakes-eawag.ch/update/{}".format(datalakes_id))
             time.sleep(30)
+
+    if failed:
+        raise
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

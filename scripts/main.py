@@ -10,7 +10,7 @@ from instruments import IdronautD1, IdronautD2, IdronautD3
 from general.functions import logger, files_in_directory
 from functions import retrieve_new_files
 
-def main(server=False, logs=False, remove_api_data=False):
+def main(server=False, logs=False):
     repo = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
     if logs:
         log = logger(os.path.join(repo, "logs/idronaut"))
@@ -30,9 +30,7 @@ def main(server=False, logs=False, remove_api_data=False):
             raise ValueError("Credential file required to retrieve live data from the fstp server.")
         with open(os.path.join(repo, "creds.json"), 'r') as f:
             creds = json.load(f)
-        files = retrieve_new_files(directories["Level0"],
-                                       creds, server_location="data/Idronaut",
-                                       filetype=".txt", remove=remove_api_data, overwrite=True)
+        files = retrieve_new_files(directories["Level0"], creds, server_location="data/Idronaut", filetype=".txt")
         edited_files = edited_files + files
     else:
         files = files_in_directory(directories["Level0"])

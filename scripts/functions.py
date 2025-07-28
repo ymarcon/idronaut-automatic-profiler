@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
-import json
-import numpy as np
-from envass import qualityassurance
-from datetime import datetime
-import math
 import os
-from shutil import copyfile
+import copy
+import json
+import ftplib
+import numpy as np
+import pandas as pd
+from shutil import move
+from datetime import datetime, timedelta
+from envass import qualityassurance
+from general.functions import logger
 
 
 def copy_files(outfolder, infolder):
@@ -17,22 +20,28 @@ def copy_files(outfolder, infolder):
             copied.append(os.path.join(outfolder, file))
     return copied
 
-def retrieve_new_files(folder, creds, server_location="data", filetype=".csv", remove=False, overwrite=False, log=logger()):
+
+def retrieve_new_files(folder, creds, log=logger(), server_location="data", filetype=".dat"):
     files = []
     log.info("Connecting to {}.".format(creds["ftp"]), indent=1)
-    ftp = ftplib.FTP(creds["ftp"], timeout=100)
-    ftp.login(creds["user"], creds["password"])
+    ftp = ftplib.FTP(creds["ftp"], creds["user"], creds["password"], timeout=100)
     server_files = ftp.nlst(server_location)
+    server_files.sort()
     local_files = os.listdir(folder)
     for file in server_files:
         file_name = os.path.basename(file)
-        if file.endswith(filetype) and (overwrite or file_name not in local_files):
+        if file_name not in local_files and file.endswith(filetype) and "status" not in file_name:
             log.info("Downloading file {}".format(file), indent=2)
-            download_file(file, os.path.join(folder, file_name), ftp)
-            if remove:
-                ftp.delete(file)
+            download_file(os.path.join(file), os.path.join(folder, file_name), ftp)
             files.append(os.path.join(folder, file_name))
+        try:
+            if (datetime.now() - datetime.strptime(file_name[:10], "%Y-%m-%d")) > timedelta(days=30):
+                log.info("Remove old file {} from server".format(file), indent=2)
+                ftp.delete(file)
+        except Exception as e:
+            log.info("Couldn't detect date of {}".format(file), indent=2)
     files.sort()
+    log.info("{} new files found on the server.".format(len(files)), indent=1)
     return files
 
 
