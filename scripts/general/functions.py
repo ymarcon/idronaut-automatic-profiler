@@ -36,33 +36,49 @@ class GenericInstrument:
         else:
             self.log = logger()
 
-    def quality_assurance(self, file_path='./quality_assurance.json', valid=False, time_label="time"):
+    def quality_assurance(self, file_path='./quality_assurance.json', maintenance_file=False, valid=False,
+                          time_label="time"):
         self.log.info("Applying quality assurance", indent=2)
 
         if not os.path.exists(file_path):
             self.log.warning("Cannot find QA file: {}, no QA applied.".format(file_path), indent=2)
             return False
-        try:
-            quality_assurance_dict = json_converter(json.load(open(file_path)))
-            for key, values in self.variables.copy().items():
-                if "_qual" not in key and key in quality_assurance_dict:
-                    name = key + "_qual"
-                    self.variables[name] = {'var_name': name, 'dim': values["dim"],
-                                            'unit': '0 = nothing to report, 1 = more investigation',
-                                            'long_name': name, }
-                    if len(self.data[key]) == 1:
-                        self.data[name] = [1]
-                    else:
-                        qa = qualityassurance(np.array(self.data[key]), np.array(self.data[time_label]),
-                                              **quality_assurance_dict[key]["simple"])
-                        if valid:
+
+        periods = []
+        if maintenance_file:
+            print("Processing maintenance periods from {}".format(maintenance_file))
+            df = pd.read_csv(maintenance_file, sep=";")
+            df["start"] = df["start"].apply(
+                lambda x: datetime.timestamp(datetime.strptime(x, '%Y%m%d %H:%M:%S').replace(tzinfo=timezone.utc)))
+            df["stop"] = df["stop"].apply(
+                lambda x: datetime.timestamp(datetime.strptime(x, '%Y%m%d %H:%M:%S').replace(tzinfo=timezone.utc)))
+            for d in df.to_dict('records'):
+                periods.append(d)
+
+        quality_assurance_dict = json_converter(json.load(open(file_path)))
+        for key, values in self.variables.copy().items():
+            if "_qual" not in key and key in quality_assurance_dict:
+                name = key + "_qual"
+                self.variables[name] = {'var_name': name, 'dim': values["dim"],
+                                        'unit': '0 = nothing to report, 1 = more investigation',
+                                        'long_name': name, }
+                if len(self.data[key]) == 1:
+                    self.data[name] = [1]
+                else:
+                    qa = qualityassurance(np.array(self.data[key]), np.array(self.data[time_label]),
+                                          **quality_assurance_dict[key]["simple"])
+                    if valid:
+                        time = np.array(self.data[time_label])
+                        if min(time) < valid[0] < max(time) and min(time) < valid[1] < max(time):
+                            qa[time < valid[0]] = 1
+                            qa[time > valid[1]] = 1
+
+                    if periods:
+                        for period in periods:
                             time = np.array(self.data[time_label])
-                            if min(time) < valid[0] < max(time) and min(time) < valid[1] < max(time):
-                                qa[time < valid[0]] = 1
-                                qa[time > valid[1]] = 1
+                            if key in period["parameter"]:
+                                qa[np.logical_and(time > period["start"], time < period["stop"])] = 1
                         self.data[name] = qa
-        except:
-            self.log.error("Unable to apply QA file, this is likely due to bad formatting of the file.")
 
     def mask_outside_water_and_upcast_ctd(self, rolling=3, diff=0.01, var="Cond", depth="Press", max_depth_cut=3.0):
         self.log.info("Masking data from outside water and the upcast.", 2)

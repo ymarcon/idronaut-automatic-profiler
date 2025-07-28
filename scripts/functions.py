@@ -17,3 +17,27 @@ def copy_files(outfolder, infolder):
             copied.append(os.path.join(outfolder, file))
     return copied
 
+def retrieve_new_files(folder, creds, server_location="data", filetype=".csv", remove=False, overwrite=False, log=logger()):
+    files = []
+    log.info("Connecting to {}.".format(creds["ftp"]), indent=1)
+    ftp = ftplib.FTP(creds["ftp"], timeout=100)
+    ftp.login(creds["user"], creds["password"])
+    server_files = ftp.nlst(server_location)
+    local_files = os.listdir(folder)
+    for file in server_files:
+        file_name = os.path.basename(file)
+        if file.endswith(filetype) and (overwrite or file_name not in local_files):
+            log.info("Downloading file {}".format(file), indent=2)
+            download_file(file, os.path.join(folder, file_name), ftp)
+            if remove:
+                ftp.delete(file)
+            files.append(os.path.join(folder, file_name))
+    files.sort()
+    return files
+
+
+def download_file(server, local, ftp):
+    with open(local, "wb") as f:
+        ftp.retrbinary("RETR " + server, f.write)
+
+
