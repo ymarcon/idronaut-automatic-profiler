@@ -57,6 +57,7 @@ def main(server=False, logs=False):
             edited_files.extend(sensor.export(directories["Level1"], "L1_LexploreIdronaut_" + deployment))
             sensor.mask_data()
             sensor.profile_to_timeseries_grid(depth_label="Press")
+            sensor.compute_physical_quantities()
             edited_files.extend(sensor.export(directories["Level2"], "L2_LexploreIdronaut_" + deployment, output_period="monthly",
                           profile_to_grid=True))
     log.end_stage()

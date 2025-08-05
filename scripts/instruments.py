@@ -5,6 +5,7 @@ import json
 import warnings
 import numpy as np
 import pandas as pd
+import pylake
 from scipy.interpolate import griddata
 from datetime import datetime, timedelta, timezone
 from general.functions import GenericInstrument, json_converter
@@ -75,8 +76,44 @@ class Idronaut(GenericInstrument):
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
-        self.depths = np.concatenate((np.linspace(0, 30, 151), np.linspace(30.5, 90, 60)))
+        self.depths = np.concatenate((np.linspace(1, 30, 151), np.linspace(30.5, 90, 60)))
 
+    def compute_physical_quantities(self, bathymetry_file="notes/bathymetry.csv"):
+
+        # Pylake
+        self.log.info("Computing physical quantities for dataset", indent=2)
+        new_variables = ['mixed_layer_depth', 'thermocline_depth']
+        new_units = ['m', 'm']
+
+        for variable, unit in zip(new_variables, new_units):
+            self.grid_variables[variable] = {'var_name': variable, 'dim': ('time',), 'unit': unit, 'long_name': variable}
+        
+        # Check if there are any non-NaN values at depth < 2 m and > 55 m
+        has_shallow_data = np.any(~np.isnan(self.grid['Temp'][self.depths <= 1.5]))
+        has_deep_data = np.any(~np.isnan(self.grid['Temp'][self.depths > 55]))
+
+        # Find the indices of non-NaN values
+        non_nan_indices = np.where(~np.isnan(self.grid['Temp']))[0]
+        if non_nan_indices.size > 0:
+            last_valid_index = non_nan_indices[-1]
+
+        if has_shallow_data and has_deep_data:
+            self.log.info("Computing physical quantities for profile", indent=2)
+            hTH = pylake.robust_thermocline(self.grid['Temp'], self.depths, s=self.grid['Sal'])
+            
+            if hTH < min(self.depths):
+                hTH = np.nan
+            if hTH > max(self.depths):
+                hTH = np.nan
+
+            hML = pylake.mixed_layer(self.grid['Temp'], self.depths, s=self.grid['Sal'], threshold=0.01)
+
+            self.grid["thermocline_depth"] = hTH
+            self.grid["mixed_layer_depth"] = hML
+        else:
+            self.log.warning("Profile is short. Products will not be calculated.", indent=2)
+            self.grid["thermocline_depth"] = np.nan
+            self.grid["mixed_layer_depth"] = np.nan
 
 class IdronautD1(Idronaut):
     def read_data(self, file):
