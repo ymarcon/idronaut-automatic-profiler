@@ -76,7 +76,7 @@ class Idronaut(GenericInstrument):
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
-        self.depths = np.concatenate((np.linspace(1, 30, 151), np.linspace(30.5, 90, 60)))
+        self.depths = np.concatenate((np.linspace(1.4, 30, 144), np.linspace(30.5, 90, 60)))
 
     def compute_physical_quantities(self, bathymetry_file="notes/bathymetry.csv"):
 
@@ -89,7 +89,7 @@ class Idronaut(GenericInstrument):
             self.grid_variables[variable] = {'var_name': variable, 'dim': ('time',), 'unit': unit, 'long_name': variable}
         
         # Check if there are any non-NaN values at depth < 2 m and > 55 m
-        has_shallow_data = np.any(~np.isnan(self.grid['Temp'][self.depths <= 1.5]))
+        has_shallow_data = np.any(~np.isnan(self.grid['Temp'][self.depths <= 2]))
         has_deep_data = np.any(~np.isnan(self.grid['Temp'][self.depths > 55]))
 
         # Find the indices of non-NaN values
