@@ -164,7 +164,7 @@ class GenericInstrument:
                         else:
                             if len(values["dim"]) == 1:
                                 if values["dim"][0] == time_label:
-                                    var[:] = data[key][valid_time]
+                                    var[:] = data[key]
                                 else:
                                     var[:] = data[key]
                             elif len(values["dim"]) == 2:
