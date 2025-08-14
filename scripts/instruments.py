@@ -98,14 +98,14 @@ class Idronaut(GenericInstrument):
 
         if has_shallow_data and has_deep_data:
             self.log.info("Computing physical quantities for profile", indent=2)
-            hTH = pylake.robust_thermocline(self.grid['Temp'], self.depths, s=self.grid['Sal'])
+            hTH = pylake.robust_thermocline(self.grid['Temp'], self.depths, s=0.2) # Could use measured salinity, but does not seem reliable and mixing depth is not significantly influenced by salinity here
             
             if hTH < min(self.depths):
                 hTH = np.nan
             if hTH > max(self.depths):
                 hTH = np.nan
 
-            hML = pylake.mixed_layer(self.grid['Temp'], self.depths, s=self.grid['Sal'], threshold=0.01)
+            hML = pylake.mixed_layer(self.grid['Temp'], self.depths, s=0.2, threshold=0.01)
 
             self.grid["thermocline_depth"] = hTH
             self.grid["mixed_layer_depth"] = hML
