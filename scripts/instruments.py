@@ -76,12 +76,11 @@ class Idronaut(GenericInstrument):
             'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
             'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
-        self.depths = np.concatenate((np.linspace(1.4, 30, 144), np.linspace(30.5, 90, 60)))
+        self.depths = depths = np.concatenate((np.arange(1.4, 30.01, 0.2),np.arange(30.5, 90.01, 0.5)))
 
     def compute_physical_quantities(self, bathymetry_file="notes/bathymetry.csv"):
 
         # Pylake
-        self.log.info("Computing physical quantities for dataset", indent=2)
         new_variables = ['mixed_layer_depth', 'thermocline_depth']
         new_units = ['m', 'm']
 
