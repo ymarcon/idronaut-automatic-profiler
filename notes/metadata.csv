@@ -1,0 +1,328 @@
+﻿Date;Time (UTC);ID;Type;Parameters;Comments;Operator;
+17.06.2020;09:30:00;1;Installation;"Winch;N/A;Buoy Profiler 601;N/A";Installation Idronaut + winch ;Fabio Dos Santos Correia;20150520_trilux_SN053.pdf, Certificate_of_Calibration_715681_20200127.pdf
+29.06.2020;00:00:00;2;Installation;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut first measurement;Fabio Dos Santos Correia;
+07.07.2020;02:00:00;3;Issue;"Winch;N/A;Buoy Profiler 601;N/A";Data not coming, cable issue, power issue;Fabio Dos Santos Correia;
+19.01.2021;12:00:00;3;Repair;"Winch;N/A;Buoy Profiler 601;N/A";Everything in order;Sébastien Lavanchy;
+22.08.2021;15:10:00;4;Issue;"Winch;N/A;Buoy Profiler 601;N/A";Cable broken, CTD at the bottom of the lake;Sébastien Lavanchy;
+14.09.2021;09:30:00;4;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";recovery of the Idronaut at the bottom of the lake with the ROV;Guillaume Cunillera;
+10.01.2022;12:00:00;4;Calibration Factory;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";No trilux calibration;Roxane Fillion;Certificate_of_Calibration_715681_20220110.pdf
+22.02.2022;13:30:00;4;Repair;"Winch;N/A;Buoy Profiler 601;N/A";Test Winch, com, and how to install the cable.Idronaut test tomorrow;Sébastien Lavanchy;
+01.03.2022;09:30:00;4;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Reinstall Idronaut, ok / install thetis weight and redeploy it.;Sébastien Lavanchy;
+19.03.2022;09:20:00;5;Issue;"Winch;N/A;Buoy Profiler 601;N/A";Power issue;Sébastien Lavanchy;
+25.03.2022;10:30:00;5;Repair;"Winch;N/A;Buoy Profiler 601;N/A";battery charge  limit, go to 1 profile every two hours;Sébastien Lavanchy;
+05.04.2022;09:40:00;6;Issue;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;053(CTD715681)";Trilux measurement is drifting;Guillaume Cunillera;
+12.05.2022;00:00:00;6;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Sébastien Lavanchy;
+12.05.2022;13:00:00;6;Repair;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;053(CTD715681)";Trilux idronaut test and repair (biofilm on the glass);Sébastien Lavanchy;
+06.06.2022;16:00:00;7;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut bad setting, issue programation;Fabio Dos Santos Correia;
+16.06.2022;22:00:00;8;Issue;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;053(CTD715681)";Idronaut stuck in the moonpool, Trilux broken;Sébastien Lavanchy;
+20.06.2022;22:00:00;8;Out of order;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;053(CTD715681)";Trilux full of water, hole in enclosure, electronic dead;Sébastien Lavanchy;
+21.06.2022;11:15:00;7;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut support troubleshooting,  ok;Sébastien Lavanchy;
+01.07.2022;10:10:00;9;Issue;"Winch;N/A;Buoy Profiler 601;N/A";Intermitent cable communication issue;Sébastien Lavanchy;
+14.07.2022;09:00:00;10;Issue;"ph glass;ph;bulkhead version;1221868(CTD715681)";PH start to drift;Sébastien Lavanchy;
+18.07.2022;12:00:00;11;Calibration Factory;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD1122783)";;Guillaume Cunillera;
+03.08.2022;10:00:00;8;Installation;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-004(CTD715681)";Install new Trilux on Idronaut, with light cover;Sébastien Lavanchy;20220718_trilux_SN21-2930-004.pdf
+03.08.2022;14:00:00;8;Repair;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-004(CTD715681)";New trilux working and measuring;Sébastien Lavanchy;
+18.08.2022;10:00:00;9;Repair;"Winch;N/A;Buoy Profiler 601;N/A";repair cable;Guillaume Cunillera;
+25.08.2022;12:10:00;12;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Sébastien Lavanchy;
+21.09.2022;12:30:00;13;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Floreana Miesen;
+31.10.2022;13:30:00;14;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Philippe Quetin;
+03.11.2022;11:00:00;15;Out of order;"ph glass;ph;bulkhead version;1221868(CTD715681)";cannot calibrate the sensor, too old;Sébastien Lavanchy;
+03.11.2022;11:00:00;15;Out of order;"ph reference;ph;reference sensor;1121863(CTD715681)";Goes with Ph sensor;Sébastien Lavanchy;
+09.11.2022;12:00:00;16;Calibration Factory;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-005(CTD1122783)";;Guillaume Cunillera;
+24.11.2022;12:00:00;17;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";cleaning;Roxane Fillion;
+24.11.2022;12:00:00;18;Issue;"Do;Do;optical sensor;22/11052(CTD715681)";cap broken, no measures;Roxane Fillion;
+01.12.2022;11:45:00;15;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Take Idronaut out, for PH sensor change;Guillaume Cunillera;
+01.12.2022;16:00:00;15;Installation;"ph glass;ph;bulkhead version;1122950(CTD715681)";New ph sensor;Guillaume Cunillera;
+01.12.2022;16:00:00;15;Installation;"ph reference;ph;reference sensor;0922936(CTD715681)";new reference sensor;Guillaume Cunillera;
+02.12.2022;09:00:00;15;Repair;"ph glass;ph;bulkhead version;1122950(CTD715681)";new sensor, installed and tested;Guillaume Cunillera;
+02.12.2022;08:10:00;15;Calibration Lab;"ph glass;ph;bulkhead version;1122950(CTD715681)";Calibration new sensor;Sébastien Lavanchy;Cal_Idronaut_PH_20221202
+02.12.2022;08:20:00;18;Calibration Lab;"Do;Do;optical sensor;22/11052(CTD715681)";Calibration new cap;Sébastien Lavanchy;Cal_Idronaut_OPT0.2%_20221202
+02.12.2022;09:00:00;18;Repair;"Do;Do;optical sensor;22/11052(CTD715681)";new cap installed, calibrated, and tested;Sébastien Lavanchy;
+02.12.2022;10:00:00;15;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";redeployed;Sébastien Lavanchy;
+14.12.2022;09:00:00;19;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";idronaut out for maintenance and cable repair;Roxane Fillion;
+14.12.2022;10:48:00;19;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer;Roxane Fillion;Cal_Idronaut_PH_20221214
+14.12.2022;12:25:00;19;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Field ;Roxane Fillion;Cal_Idronaut_Pressure_20221214
+14.12.2022;12:49:00;19;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Roxane Fillion;Cal_Idronaut_OPT0.2%_20221214 , Cal_Idronaut_OPT0.2_20221214
+14.12.2022;13:03:00;19;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning all sensors;Roxane Fillion;
+15.12.2022;10:30:00;19;Other;"Winch;N/A;Buoy Profiler 601;N/A";Repair cable + move structure 12cm WEST;Guillaume Cunillera;
+15.12.2022;11:00:00;19;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Redeploy Idronaut;Sébastien Lavanchy;
+18.01.2023;11:00:00;20;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";idronaut out for maintenance and cable change;Roxane Fillion;
+18.01.2023;11:00:00;20;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning of all the sensors;Roxane Fillion;
+18.01.2023;13:10:00;20;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer;Matteo Gios;Cal_Idronaut_PH_20230118
+18.01.2023;13:10:00;20;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Matteo Gios;Cal_Idronaut_OPT0.2%_20230118, Cal_Idronaut_OPT0.2_20230118
+18.01.2023;14:00:00;20;Other;"Winch;N/A;Buoy Profiler 601;N/A";New cable;Guillaume Cunillera;
+18.01.2023;14:36:00;20;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Redeploy Idronaut;Guillaume Cunillera;
+26.01.2023;09:00:00;21;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut out for factory calibration;Sébastien Lavanchy;
+26.01.2023;10:00:00;21;Installation;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Installation new Idronaut;Sébastien Lavanchy;Turner_Certificate_21201237.pdf, Certificate_of_Calibration_1122783.pdf, Trilux_Certificate_21-2930-005.pdf
+26.01.2023;10:31:00;21;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";Calibrate O2 at the right altitude;Sébastien Lavanchy;Cal_Idronaut_OPT0.2%_20230126, Cal_Idronaut_OPT0.2_20230126
+26.01.2023;10:34:00;21;Calibration Field;"Pressure Transducer;pressure;PA-10;K221886(CTD1122783)";Set pressure, for geneva Lake;Sébastien Lavanchy;Cal_Idronaut_Pressure_20230126
+27.01.2023;17:00:00;21;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";First measrument with new CTD;Sébastien Lavanchy;
+28.01.2023;17:00:00;22;Issue;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD1122783)";Missing digits;Sébastien Lavanchy;
+28.01.2023;17:00:00;23;Issue;"Temperature;temperature;N/A;N/A(CTD1122783)";Offset + temp jump;Sébastien Lavanchy;
+01.02.2023;10:30:00;24;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";recovery for the cross comparison day;Guillaume Cunillera;
+01.02.2023;11:00:00;24;Cross comparison ;"CTDs;multiparameters;OCEAN SEVEN 316 Plus;715681 & 1122783";deployment with 2 sea and sun CTDs and 2 Idronauts on Thetis for cross comparison. Files not on datalakes. Start 11:00;Sébastien Lavanchy;
+01.02.2023;17:00:00;24;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+02.02.2023;16:00:00;22;Repair;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD1122783)";Ok, now with 2 digits after the dot.;Sébastien Lavanchy;
+14.02.2023;09:00:00;25;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut out for maintenance and calibration;Guillaume Cunillera;
+14.02.2023;09:00:00;25;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning of all the sensors;Roxane Fillion;
+14.02.2023;09:30:00;25;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer, 3.91;Roxane Fillion;Cal_Idronaut_PH_20230214
+14.02.2023;09:30:00;25;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Roxane Fillion;Cal_Idronaut_OPT0.2_OPT0.2%_20230214
+14.02.2023;11:00:00;25;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back to water;Sébastien Lavanchy;
+28.02.2023;12:00:00;26;Calibration Factory;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Factory calibration after Temp sensor repair;Sébastien Lavanchy;20230228_Certificate_of_Calibration_1122783
+15.03.2023;11:30:00;27;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Out for calibration;Sébastien Lavanchy;
+15.03.2023;11:35:00;27;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning all sensor;Sébastien Lavanchy;
+15.03.2023;11:35:00;28;Issue;"Winch;N/A;Buoy Profiler 601;N/A";Pin  telemetry broken in the cable;Sébastien Lavanchy;
+15.03.2023;11:55:00;27;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_715681_20230315
+15.03.2023;12:00:00;27;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% done and OPT_0.2 checked;Sébastien Lavanchy;Cal_Idronaut_OPT0.2%_715681_20230315
+15.03.2023;12:34:00;27;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD715681)";ph4 checked, 3.863;Sébastien Lavanchy;Cal_Idronaut_PH_715681_20230315
+15.03.2023;14:04:00;27;Calibration Field;"Pressure Transducer;pressure;PA-10;K221886(CTD1122783)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_1122783_20230315
+15.03.2023;14:00:00;27;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% done and OPT_0.2 checked;Sébastien Lavanchy;Cal_Idronaut_OPT0.2%_1122783_20230315
+15.03.2023;15:00:00;27;Cross comparison ;"CTDs;multiparameters;OCEAN SEVEN 316 Plus;715681 & 1122783";CTD profile with both CTD at same heigths;Sébastien Lavanchy;
+21.03.2023;11:00:00;28;Repair;"Winch;N/A;Buoy Profiler 601;N/A";Install new connector;Sébastien Lavanchy;
+21.03.2023;12:00:00;29;Installation;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD1122783)";cyclops on CTD 1122783;Guillaume Cunillera;
+21.03.2023;15:00:00;30;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";New Idronaut on the water swap;Sébastien Lavanchy;
+19.04.2023;09:30:00;31;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Idronaut out for maintenance and calibration;Roxane Fillion;
+19.04.2023;09:30:00;31;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning of all the sensors;Roxane Fillion;
+19.04.2023;09:30:00;31;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph4 checked with buffer, 3.953;Roxane Fillion;Cal_Idronaut_pH_1122783_20230419
+19.04.2023;09:30:00;31;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Roxane Fillion;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230419
+19.04.2023;09:30:00;31;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Check of conductivity with standard;Roxane Fillion;Check_Idronaut_Conductivité_1122783_20230419
+19.04.2023;13:15:00;31;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+12.05.2023;09:30:00;32;Issue;"Winch;N/A;Buoy Profiler 601;N/A";To much water current, issue with the drum, and cable problem.  Interval set to 6 hours;Sébastien Lavanchy;
+15.05.2023;09:30:00;32;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for winch work;Sébastien Lavanchy;
+15.05.2023;12:00:00;32;Repair;"Winch;N/A;Buoy Profiler 601;N/A";Repair cable, move the structure lower and drum in the direction of the main currant;Sébastien Lavanchy;
+15.05.2023;14:00:00;32;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+25.05.2023;08:30:00;33;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance;Sébastien Lavanchy;
+25.05.2023;09:00:00;33;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning;Sébastien Lavanchy;
+25.05.2023;10:20:00;33;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_1122783_20230524
+25.05.2023;10:32:00;33;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230524
+25.05.2023;11:15:00;33;Calibration Field;"ph reference;ph;reference sensor;1121863(CTD715681)";ph4 checked with buffer, 3.904;Sébastien Lavanchy;Cal_Idronaut_pH_1122783_20230524
+25.05.2023;11:30:00;33;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Check of conductivity with standard;Sébastien Lavanchy;Check_Idronaut_Conductivité_1122783_20230524
+25.05.2023;12:00:00;33;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+21.06.2023;10:45:00;34;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance;Sébastien Lavanchy;
+21.06.2023;10:50:00;34;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning;Sébastien Lavanchy;
+21.06.2023;11:12:00;34;Calibration Field;"Pressure Transducer;pressure;PA-10;K221886(CTD1122783)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_1122783_20230621
+21.06.2023;11:14:00;34;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230621
+21.06.2023;11:17:00;34;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph4 checked with buffer, 3.980;Sébastien Lavanchy;Cal_Idronaut_pH_1122783_20230621
+21.06.2023;11:35:00;34;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Check of conductivity with standard;Sébastien Lavanchy;Check_Idronaut_Conductivité_1122783_20230621
+21.06.2023;11:50:00;34;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+29.06.2023;12:00:00;35;Calibration Factory;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Factory calibration;Sébastien Lavanchy;Certificate_of_Calibration_715681_20230629
+19.07.2023;10:30:00;35;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance;Roxane Fillion;
+19.07.2023;10:40:00;35;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning;Roxane Fillion;
+19.07.2023;10:50:00;35;Maintenance;"Do;Do;optical sensor;0622917(CTD1122783)";Replacment of the blue cap that was damaged by a new one;Roxane Fillion;
+19.07.2023;10:55:00;35;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Roxane Fillion;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230719
+19.07.2023;11:00:00;35;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph4 checked with buffer, 3.87;Roxane Fillion;Cal_Idronaut_pH_1122783_20230719
+19.07.2023;11:10:00;35;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Check of conductivity with standard;Roxane Fillion;Check_Idronaut_Conductivité_1122783_20230719
+19.07.2023;15:00:00;35;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Roxane Fillion;
+16.08.2023;10:00:00;36;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance;Sébastien Lavanchy;
+16.08.2023;10:30:00;36;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning;Sébastien Lavanchy;
+16.08.2023;11:13:00;36;Calibration Field;"Pressure Transducer;pressure;PA-10;K221886(CTD1122783)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_1122783_20230816
+16.08.2023;11:18:00;36;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_715681_20230816
+16.08.2023;11:23:00;36;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20230816
+16.08.2023;11:46:00;36;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230816
+16.08.2023;12:08:00;36;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph4 checked with buffer, 3.902;Sébastien Lavanchy;Cal_Idronaut_pH_1122783_20230816
+16.08.2023;12:21:00;36;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer, 3.978;Sébastien Lavanchy;Cal_Idronaut_pH_715681_20230816
+16.08.2023;13:05:00;36;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Sébastien Lavanchy;Check_Idronaut_Conductivity_715681_20230816
+16.08.2023;13:11:00;36;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Check of conductivity with standard;Sébastien Lavanchy;Check_Idronaut_Conductivity_1122783_20230816
+17.08.2023;15:13:00;36;Cross comparison ;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";2 Idronaut, 2 seasun;Sébastien Lavanchy;
+17.08.2023;15:13:00;36;Cross comparison ;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";2 Idronaut, 2 seasun;Sébastien Lavanchy;
+17.08.2023;10:00:00;36;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back to water;Sébastien Lavanchy;
+13.09.2023;08:30:00;37;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance, loaned to EAWAG;Sébastien Lavanchy;
+13.09.2023;10:30:00;37;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cleaning;Sébastien Lavanchy;
+13.09.2023;11:25:00;37;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_1122783_20230913
+13.09.2023;11:40:00;37;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph4 checked with buffer, 3.915;Sébastien Lavanchy;Cal_Idronaut_pH_1122783_20230913
+13.09.2023;11:51:00;37;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20230913
+13.09.2023;12:00:00;37;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer, 4.012;Sébastien Lavanchy;Cal_Idronaut_pH_715681_20230913
+13.09.2023;12:51:00;37;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";swap Idronaut;Sébastien Lavanchy;
+13.09.2023;12:51:00;37;Deployment/reinstalled;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD1122783)";cyclops swap;Sébastien Lavanchy;
+19.10.2023;10:00:00;38;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Sébastien Lavanchy;
+19.10.2023;10:15:00;38;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Sébastien Lavanchy;
+19.10.2023;11:00:00;38;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Sébastien Lavanchy;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20231019
+19.10.2023;11:23:00;38;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Pressure compensation;Sébastien Lavanchy;Cal_Idronaut_Pressure_715681_20231019
+19.10.2023;11:32:00;38;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph4 checked with buffer, 3.993;Sébastien Lavanchy;Cal_Idronaut_pH_715681_20231019
+19.10.2023;11:40:00;38;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Sébastien Lavanchy;Check_Idronaut_Conductivity_715681_20231019
+19.10.2023;14:00:00;38;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back to water;Sébastien Lavanchy;
+16.11.2023;07:00:00;39;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Sébastien Lavanchy;
+16.11.2023;08:30:00;39;Repair;"Winch;N/A;Buoy Profiler 601;N/A";Cable damaged, new molding;Sébastien Lavanchy;
+16.11.2023;09:00:00;39;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Sébastien Lavanchy;
+16.11.2023;09:20:00;39;Repair;"Do;Do;optical sensor;22/11052(CTD715681)";New cap installed;Sébastien Lavanchy;
+21.11.2023;10:30:00;39;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";cleaning + calib + internal battery inspected and charged;Roxane Fillion;
+21.11.2023;10:45:00;39;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Roxane Fillion;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20231121
+21.11.2023;11:00:00;39;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD715681)";ph4 checked with buffer, 3.92;Roxane Fillion;Cal_Idronaut_pH_715681_20231121
+21.11.2023;11:15:00;39;Maintenance;"Redox;Redox;bulkhead version;N/A(CTD715681)";cleaning;Roxane Fillion;
+21.11.2023;11:30:00;39;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";cleaning;Roxane Fillion;
+21.11.2023;11:45:00;39;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Roxane Fillion;Check_Idronaut_Conductivity_715681_20231121
+21.11.2023;12:00:00;39;Check field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Simple check of pressure out of water (0.15) vs immerged (0.18);Roxane Fillion;Check_Idronaut_Pressure_715681_20231121
+21.11.2023;14:30:00;39;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";back to water;Roxane Fillion;
+21.11.2023;14:30:00;40;Issue;"ph glass;ph;bulkhead version;1122950(CTD715681)";Weird data (seen later : KCL cup forgotten on the sensor);Guillaume Cunillera;
+20.12.2023;09:30:00;41;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Jérémy Keller;
+20.12.2023;10:00:00;40;Repair;"ph glass;ph;bulkhead version;1122950(CTD715681)";Problem resolved. Forgot to remove the PH KCL cup ;Sébastien Lavanchy;
+20.12.2023;10:59:00;41;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20232012
+20.12.2023;11:15:00;41;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,96;Jérémy Keller;Cal_Idronaut_pH_715681_20232012
+20.12.2023;11:38:00;41;Calibration Field;"Pressure Transducer;pressure;PA-10;F227251(CTD715681)";Pressure calibrated;Jérémy Keller;Cal_Idronaut_Pressure_715681_20232012
+20.12.2023;12:04:00;41;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Jérémy Keller;Check_Idronaut_Conductivity_715681_20232012
+20.12.2023;12:30:00;41;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back to water;Jérémy Keller;
+10.01.2024;15:00:00;42;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Recovery for cable repair;Guillaume Cunillera;
+12.01.2024;16:00:00;42;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";back to the lake. Cable shortened + test shock absorber.;Guillaume Cunillera;
+16.01.2024;12:00:00;43;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;Cal_Idronaut_OPT0.2_OPT0.2%_715681_20240116
+16.01.2024;12:15:00;43;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,951;Jérémy Keller;
+16.01.2024;12:30:00;43;Maintenance;"Redox;Redox;bulkhead version;N/A(CTD715681)";cleaning;Jérémy Keller;
+16.01.2024;12:40:00;43;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";cleaning;Jérémy Keller;
+16.01.2024;12:40:00;43;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Jérémy Keller;
+16.01.2024;13:15:00;43;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";back to water;Jérémy Keller;
+15.02.2024;10:10:00;44;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Out for maintenance;Jérémy Keller;
+15.02.2024;10:20:00;44;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Jérémy Keller;
+15.02.2024;10:30:00;44;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+15.02.2024;12:40:00;44;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,84;Jérémy Keller;
+15.02.2024;12:40:00;44;Issue;"ph glass;ph;bulkhead version;1122950(CTD715681)";Offset = 1.313 : too high, new pH sensor needed;Jérémy Keller;
+15.02.2024;13:05:00;44;Check field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Check of conductivity with standard;Jérémy Keller;
+15.02.2024;13:05:00;44;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";cleaning;Jérémy Keller;
+15.02.2024;13:10:00;44;Maintenance;"Redox;Redox;bulkhead version;N/A(CTD715681)";cleaning;Jérémy Keller;
+15.02.2024;13:15:00;44;Maintenance;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-004(CTD715681)";cleaning;Jérémy Keller;
+15.02.2024;14:00:00;44;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back to water;Jérémy Keller;
+29.02.2024;10:00:00;45;Other;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";canble changed. New settings to 90m deep;Guillaume Cunillera;
+07.03.2024;13:30:00;46;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Jérémy Keller;
+07.03.2024;13:45:00;46;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Jérémy Keller;
+07.03.2024;14:00:00;46;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+07.03.2024;14:18:00;46;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,82;Jérémy Keller;
+07.03.2024;14:23:00;46;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Cleaned and checked;Jérémy Keller;
+07.03.2024;14:30:00;46;Maintenance;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-004(CTD715681)";Cleaned;Jérémy Keller;
+07.03.2024;15:15:00;46;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back in water;Jérémy Keller;
+08.03.2024;10:30:00;47;Cross comparison ;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";crosscomparison with Thetis + 2 CTDs (10:30 - 14:30);Guillaume Cunillera;
+24.03.2024;04:00:00;48;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";stationary mode for no reason;Guillaume Cunillera;
+27.03.2024;09:00:00;48;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";back in profile mode. ;Guillaume Cunillera;
+17.04.2024;12:00:00;49;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Strong curent, stuck with temp chain cable. Retrieve, out of water and secured;Jérémy Keller;
+18.04.2024;10:53:44;49;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Cleaning;Jérémy Keller;
+18.04.2024;11:13:00;49;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+18.04.2024;11:43:00;49;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,91;Jérémy Keller;
+18.04.2024;11:53:00;49;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Cleaned and checked;Jérémy Keller;
+18.04.2024;12:20:00;49;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back in water;Jérémy Keller;
+16.05.2024;10:00:00;50;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Jérémy Keller;
+16.05.2024;10:35:00;50;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";General cleaning;Jérémy Keller;
+16.05.2024;11:16:00;50;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+16.05.2024;11:55:00;50;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,94;Jérémy Keller;
+16.05.2024;13:56:00;50;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back in water;Jérémy Keller;
+30.05.2024;12:00:00;51;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";problem with a pressure offset due to a digital board problem;Guillaume Cunillera;
+30.05.2024;12:00:00;51;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";problem with a pressure offset due to a digital board problem, digital board changed during the factory calibration;Guillaume Cunillera;
+30.05.2024;12:00:00;52;Installation;"Fluorometer;Chlorophyll;Turner C-Fluor;21202181(CTD1122783)";installation new Turner 21202181 on OS316plus 1122783 by Idronaut;Guillaume Cunillera;20240530_Certificate_of_Calibration_1122783
+30.05.2024;12:00:00;52;Calibration Factory;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Idronaut calibration ;Guillaume Cunillera;20240530_Certificate_of_Calibration_1122783
+12.06.2024;09:30:00;53;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";out for maintenance;Jérémy Keller;
+12.06.2024;10:30:00;53;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";general cleaning;Jérémy Keller;
+12.06.2024;11:00:00;53;Calibration Field;"Do;Do;optical sensor;22/11052(CTD715681)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+12.06.2024;11:15:00;53;Calibration Field;"ph glass;ph;bulkhead version;1122950(CTD715681)";ph calibrate, check with ph4, 3,93;Jérémy Keller;
+12.06.2024;11:30:00;53;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Cleaned and checked;Jérémy Keller;
+12.06.2024;11:40:00;53;Maintenance;"Redox;Redox;bulkhead version;N/A(CTD715681)";polish sensor;Jérémy Keller;
+12.06.2024;11:40:00;53;Maintenance;"Fluorometer;Chlorophyll;Turner C-Fluor;21201237(CTD715681)";cleaned;Jérémy Keller;
+12.06.2024;12:00:00;53;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Back in water;Jérémy Keller;
+12.06.2024;12:00:00;54;Issue;"Do;Do;optical sensor;22/11052(CTD715681)";Problem with OPT_0.2%, values of 0 since calibration;Jérémy Keller;
+19.06.2024;13:00:00;55;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Out for cross comparison;Jérémy Keller;
+20.06.2024;12:00:00;55;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";swap Idronaut;Jérémy Keller;
+11.07.2024;09:30:00;56;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for maintenance;Jérémy Keller;
+11.07.2024;10:00:00;56;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+11.07.2024;10:25:00;56;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+16.07.2024;09:45:00;57;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";out for maintenance;Jérémy Keller;
+16.07.2024;10:00:00;57;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+16.07.2024;10:10:00;57;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph calibrate, check with ph4, 3,96;Jérémy Keller;
+16.07.2024;10:20:00;57;Calibration Field;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD715681)";Checked ;Jérémy Keller;
+16.07.2024;10:40:00;57;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+31.07.2024;06:00:00;58;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable broken, CTD at the bottom of the lake;Jérémy Keller;
+06.08.2024;11:54:00;58;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable changed, Idronaut still at the bottom;Jérémy Keller;
+07.08.2024;12:00:00;58;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Other idronaut installed;Jérémy Keller;
+28.08.2024;14:00:00;58;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Retrieved form the bottom of the lake;Jérémy Keller;
+04.09.2024;08:12:00;59;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+04.09.2024;09:08:00;59;Maintenance;"Do;Do;optical sensor;0622917(CTD1122783)";Blue cap changed;Jérémy Keller;
+04.09.2024;09:20:00;59;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+04.09.2024;09:42:00;59;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph calibrate, check with ph4, 3,957;Jérémy Keller;
+04.09.2024;09:52:00;59;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Checked ;Jérémy Keller;
+04.09.2024;10:00:00;59;Maintenance;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-005(CTD1122783)";cleaned;Jérémy Keller;
+04.09.2024;10:05:00;59;Maintenance;"Fluorometer;Chlorophyll;Turner C-Fluor;21202181(CTD1122783)";cleaned;Jérémy Keller;
+04.09.2024;10:10:00;59;Maintenance;"Temperature;temperature;N/A;N/A(CTD1122783)";cleaned;Jérémy Keller;
+04.09.2024;12:00:00;59;Cross comparison ;"CTDs;multiparameters;OCEAN SEVEN 316 Plus;715681 & 1122783";crosscomparison with korEXO;Jérémy Keller;switchdrive\LéXPLORE_TO_V2\LéXPLORE Coredata\Crosscomparison\20240905
+28.09.2024;01:00:00;60;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";entengled at 5m deep in the Tchain cable;Guillaume Cunillera;
+01.10.2024;10:00:00;60;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";recovery;Guillaume Cunillera;
+01.10.2024;10:00:00;60;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";recovery;Guillaume Cunillera;
+02.10.2024;12:00:00;60;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable repair;Jérémy Keller;
+02.10.2024;12:00:00;61;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+02.10.2024;12:00:00;61;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+02.10.2024;12:00:00;61;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";ph calibrate, check with ph10, 10,02;Jérémy Keller;
+02.10.2024;12:00:00;61;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Checked ;Jérémy Keller;
+02.10.2024;12:00:00;61;Maintenance;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-005(CTD1122783)";cleaned;Jérémy Keller;
+02.10.2024;12:00:00;61;Maintenance;"Fluorometer;Chlorophyll;Turner C-Fluor;21202181(CTD1122783)";cleaned;Jérémy Keller;
+02.10.2024;12:00:00;61;Maintenance;"Temperature;temperature;N/A;N/A(CTD1122783)";cleaned;Jérémy Keller;
+02.10.2024;12:00:00;61;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+13.11.2024;10:03:00;62;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for maintenance;Jérémy Keller;
+13.11.2024;10:10:00;62;Maintenance;"Fluorometer;Chlorophyll, Phycoerythrin and Phycocyanin;Trilux;21-2930-005(CTD1122783)";cleaned;Jérémy Keller;
+13.11.2024;10:10:00;62;Maintenance;"Fluorometer;Chlorophyll;Turner C-Fluor;21202181(CTD1122783)";cleaned;Jérémy Keller;
+13.11.2024;10:10:00;62;Maintenance;"Temperature;temperature;N/A;N/A(CTD1122783)";cleaned;Jérémy Keller;
+13.11.2024;10:25:00;62;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";general cleaning;Jérémy Keller;
+13.11.2024;10:42:00;62;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+13.11.2024;11:14:00;62;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.61/7.05 at 11.1 °C, check with pH10, 10.097;Jérémy Keller;
+13.11.2024;12:10:00;62;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+10.12.2024;12:00:00;63;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out of water, cable damaged;Jérémy Keller;
+11.12.2024;12:00:00;63;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable shortened, max depth set to 85m and back in water;Jérémy Keller;
+17.12.2024;10:30:00;64;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for maintenance;Jérémy Keller;
+17.12.2024;10:55:00;64;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+17.12.2024;11:12:00;64;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+17.12.2024;11:54:00;64;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.45/7.05 at 09.57 °C, check with pH10, 10.11;Jérémy Keller;
+17.12.2024;12:28:00;64;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked, weird value at first but then ok;Jérémy Keller;
+17.12.2024;14:02:00;64;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+21.01.2025;10:30:00;65;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for maintenance;Guillaume Cunillera;
+21.01.2025;10:55:00;65;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Guillaume Cunillera;
+21.01.2025;11:00:00;65;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Guillaume Cunillera;
+21.01.2025;12:30:00;65;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.45/7.06 at 07.58 °C, check with pH10, 10.06;Guillaume Cunillera;
+21.01.2025;12:50:00;65;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Guillaume Cunillera;
+21.01.2025;13:00:00;65;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Tape on cable. Back in water;Guillaume Cunillera;
+18.02.2025;09:30:00;66;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for maintenance;Jérémy Keller;
+18.02.2025;09:45:00;66;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+18.02.2025;10:00:00;66;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+18.02.2025;10:35:00;66;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 done, check with pH10, 9.95;Jérémy Keller;
+18.02.2025;11:30:00;66;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+18.02.2025;12:09:00;66;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+26.02.2025;12:00:00;67;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out of water;Jérémy Keller;
+26.02.2025;12:00:00;67;Installation;"Winch;N/A;Buoy Profiler 601;N/A";New armoured cable installed;Jérémy Keller;
+27.02.2025;11:00:00;67;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water with new cable;Jérémy Keller;
+10.03.2025;06:00:00;68;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable caught in winch, Idronaut stuck at 11m and unable to profile;Jérémy Keller;
+12.03.2025;09:00:00;68;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable manually released;Jérémy Keller;
+12.03.2025;09:50:00;69;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out of water for calibration;Jérémy Keller;
+12.03.2025;10:00:00;69;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+12.03.2025;10:10:00;69;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+12.03.2025;10:35:00;69;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.47/7.04 at 12 °C, check with pH10, 9.9;Jérémy Keller;
+12.03.2025;11:50:00;69;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+12.03.2025;13:00:00;69;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water, cable shortened;Jérémy Keller;
+15.04.2025;09:20:00;70;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out of water for calibration;Jérémy Keller;
+15.04.2025;09:29:00;70;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+15.04.2025;09:41:00;70;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+15.04.2025;11:17:00;70;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.24/7.02 at 14.8 °C, check with pH10, 9.95;Jérémy Keller;
+15.04.2025;13:37:00;70;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+24.04.2025;13:00:00;71;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Winch completely unwound, no more data, Idronaut out of the water;Jérémy Keller;
+02.05.2025;12:00:00;71;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Cable repaired, Idronaut back in water;Jérémy Keller;
+13.05.2025;10:00:00;72;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Idronaut out of water, no data since 06.05.2025;Jérémy Keller;
+15.05.2025;09:00:00;72;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+15.05.2025;09:15:00;72;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+15.05.2025;09:35:00;72;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 5.435/7 at 20 °C, check with pH10, 9.94;Jérémy Keller;
+15.05.2025;09:50:00;72;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+15.05.2025;10:00:00;72;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+17.06.2025;12:00:00;73;Other;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Setup changed, back to 90m depth and new flask installed;Jérémy Keller;
+18.06.2025;09:00:00;74;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Idronaut out for calibration;Jérémy Keller;
+18.06.2025;10:00:00;74;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+18.06.2025;10:10:00;74;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+18.06.2025;12:10:00;74;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH7 before/after calib = 7.38/6.998 at 22 °C, check with pH10, 9.713;Jérémy Keller;
+18.06.2025;12:35:00;74;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+11.06.2025;12:00:00;75;Other;"Fluorometer;Turbidity;Turner C-Fluor;21202740(CTD715681)";New Turbidity C-FLUOR sensor ;Jérémy Keller;switchdrive\LéXPLORE_TO_V2\_LéXPLORE Coredata\_Metadata\Idronaut_miscellaneous\20250702
+10.07.2025;12:00:00;76;Calibration Factory;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Idronaut back from factory calibration;Jérémy Keller;switchdrive\LéXPLORE_TO_V2\_LéXPLORE Coredata\_Metadata\Idronaut_miscellaneous\20250710
+16.07.2025;09:00:00;77;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out for calibration, cross comparison and swap;Jérémy Keller;
+16.07.2025;09:20:00;78;Maintenance;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";General cleaning;Jérémy Keller;
+16.07.2025;09:30:00;78;Calibration Field;"Do;Do;optical sensor;0622917(CTD1122783)";OPT_0.2% and OPT_0.2 done;Jérémy Keller;
+16.07.2025;10:30:00;78;Calibration Field;"ph glass;ph;bulkhead version;1221868(CTD1122783)";pH calibrated;Jérémy Keller;
+16.07.2025;10:45:00;78;Maintenance;"Flow Conductivity Sensor;Conductivity;N/A;0617547(CTD1122783)";Cleaned and checked;Jérémy Keller;
+16.07.2025;14:00:00;78;Cross comparison ;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Crosscomparison profile with two Idronaut and CTD;Jérémy Keller;
+16.07.2025;15:00:00;78;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Failed to add turbidity sensor in the sorftware parameters;Jérémy Keller;
+16.07.2025;15:30:00;78;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Back in water;Jérémy Keller;
+18.07.2025;07:00:00;79;Installation;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Turbidity sensor added to the parameters;Jérémy Keller;
+18.07.2025;09:30:00;80;Recovery/removal;"CTD;multiparameter;OCEAN SEVEN 316Plus;1122783";Out of water for swap of idronauts;Jérémy Keller;
+18.07.2025;10:00:00;80;Deployment/reinstalled;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";Installed on the winch, back in water with new turbidity sensor;Jérémy Keller;
+18.07.2025;11:16:00;81;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";First profile with Idronaut back from calibration, but bad turbidity values;Jérémy Keller;
+18.07.2025;15:00:00;81;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";cleaning of the Turb sensor, looks OK now;Jérémy Keller;
+22.07.2025;08:00:00;82;Issue;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";cable entangled, Idronaut stuck, no profiles;Guillaume Cunillera;
+23.07.2025;15:30:00;82;Repair;"CTD;multiparameter;OCEAN SEVEN 316Plus;715681";OK, fixed, weight added for more tension.;Guillaume Cunillera;
+24.07.2025;12:00:00;83;Other;"Winch;N/A;Buoy Profiler 601;N/A";Idronaut transfered to PC1V2, settings as on PC1. runs locally until tomorrow for tests. Still some problems with some files not downloaded from the probe : Call intervals ? ;Guillaume Cunillera;
+25.07.2025;18:30:00;84;Other;"Winch;N/A;Buoy Profiler 601;N/A";Flake FTP program set up, Batch to transfer status file before added. Call intervals set to 2 hours instead of 4h;Guillaume Cunillera;
