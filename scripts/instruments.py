@@ -32,6 +32,7 @@ class Idronaut(GenericInstrument):
             'time': {'var_name': 'time', 'dim': ('time',), 'unit': 'seconds since 1970-01-01 00:00:00',
                      'long_name': 'time'},
             'Press': {'var_name': 'Press', 'dim': ('time',), 'unit': 'dbar', 'long_name': 'Pressure'},
+            'depth': {'var_name': 'depth', 'dim': ('time',), 'unit': 'm', 'long_name': 'water depth'},
             'Temp': {'var_name': 'Temp', 'dim': ('time',), 'unit': 'degC', 'long_name': 'temperature'},
             'Cond': {'var_name': 'Cond', 'dim': ('time',), 'unit': 'mS/cm', 'long_name': 'conductivity'},
             'Cond20': {'var_name': 'Cond20', 'dim': ('time',), 'unit': 'mS/cm', 'long_name': 'conductivity at 20deg'},
@@ -53,28 +54,28 @@ class Idronaut(GenericInstrument):
 
         self.grid_dimensions = {
             'time': {'dim_name': 'time', 'dim_size': None},
-            'Press': {'dim_name': 'Press', 'dim_size': None}
+            'depth': {'dim_name': 'depth', 'dim_size': None}
         }
 
         self.grid_variables = {
             'time': {'var_name': 'time', 'dim': ('time',), 'unit': 'seconds since 1970-01-01 00:00:00',
                      'long_name': 'time'},
-            'Press': {'var_name': 'Press', 'dim': ('Press',), 'unit': 'm', 'long_name': 'Pressure'},
-            'Temp': {'var_name': 'Temp', 'dim': ('Press', 'time',), 'unit': 'degC', 'long_name': 'temperature'},
-            'Cond': {'var_name': 'Cond', 'dim': ('Press', 'time',), 'unit': 'mS/cm', 'long_name': 'conductivity'},
-            'Cond20': {'var_name': 'Cond20', 'dim': ('Press', 'time',), 'unit': 'mS/cm', 'long_name': 'conductivity at 20deg'},
-            'Sal': {'var_name': 'Sal', 'dim': ('Press', 'time',), 'unit': 'ppt', 'long_name': 'salinity'},
-            'OPTO%': {'var_name': 'OPTO%', 'dim': ('Press', 'time',), 'unit': '%', 'long_name': 'oxygen saturation'},
-            'OPTOppm': {'var_name': 'OPTOppm', 'dim': ('Press', 'time',), 'unit': 'ppm', 'long_name': 'oxygen concentration'},
-            'pH': {'var_name': 'pH', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'pH'},
-            'eH': {'var_name': 'eH', 'dim': ('Press', 'time',), 'unit': 'mV', 'long_name': 'Potential Redox'},
-            'PAR': {'var_name': 'PAR', 'dim': ('Press', 'time',), 'unit': 'Wm-2',
+            'depth': {'var_name': 'depth', 'dim': ('depth',), 'unit': 'm', 'long_name': 'water depth'},
+            'Temp': {'var_name': 'Temp', 'dim': ('depth', 'time',), 'unit': 'degC', 'long_name': 'temperature'},
+            'Cond': {'var_name': 'Cond', 'dim': ('depth', 'time',), 'unit': 'mS/cm', 'long_name': 'conductivity'},
+            'Cond20': {'var_name': 'Cond20', 'dim': ('depth', 'time',), 'unit': 'mS/cm', 'long_name': 'conductivity at 20deg'},
+            'Sal': {'var_name': 'Sal', 'dim': ('depth', 'time',), 'unit': 'ppt', 'long_name': 'salinity'},
+            'OPTO%': {'var_name': 'OPTO%', 'dim': ('depth', 'time',), 'unit': '%', 'long_name': 'oxygen saturation'},
+            'OPTOppm': {'var_name': 'OPTOppm', 'dim': ('depth', 'time',), 'unit': 'ppm', 'long_name': 'oxygen concentration'},
+            'pH': {'var_name': 'pH', 'dim': ('depth', 'time',), 'unit': '', 'long_name': 'pH'},
+            'eH': {'var_name': 'eH', 'dim': ('depth', 'time',), 'unit': 'mV', 'long_name': 'Potential Redox'},
+            'PAR': {'var_name': 'PAR', 'dim': ('depth', 'time',), 'unit': 'Wm-2',
                     'long_name': 'photosynthetically active radiation'},
-            'Chl': {'var_name': 'Chl', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'Turb': {'var_name': 'Turb', 'dim': ('Press', 'time',), 'unit': 'FTU', 'long_name': 'Turbidity'},
-            'Chl2': {'var_name': 'Chl2', 'dim': ('Press', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
-            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
-            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('Press', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
+            'Chl': {'var_name': 'Chl', 'dim': ('depth', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
+            'Turb': {'var_name': 'Turb', 'dim': ('depth', 'time',), 'unit': 'FTU', 'long_name': 'Turbidity'},
+            'Chl2': {'var_name': 'Chl2', 'dim': ('depth', 'time',), 'unit': 'µg/L', 'long_name': 'chlorophyll A'},
+            'PhycoEr': {'var_name': 'PhycoEr', 'dim': ('depth', 'time',), 'unit': '', 'long_name': 'phycoerythrin'},
+            'PhycoCy': {'var_name': 'PhycoCy', 'dim': ('depth', 'time',), 'unit': '', 'long_name': 'phycocyanin'}
         }
         self.depths = depths = np.concatenate((np.arange(1.4, 30.01, 0.2),np.arange(30.5, 90.01, 0.5)))
 
@@ -124,6 +125,8 @@ class IdronautD1(Idronaut):
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Sal', 'O2%', 'O2ppm', 'pH', 'eH', 'PAR', 'OPTO%', 'OPTOppm', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
+            df['depth'] = df['Press']/0.981
+            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             empty = np.empty((len(df)))
             empty[:] = np.nan
@@ -148,6 +151,8 @@ class IdronautD2(Idronaut):
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
+            df['depth'] = df['Press']/0.981
+            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             df["Cond"] = df["Cond"] / 1000
             df["Cond20"] = df["Cond20"] / 1000
@@ -176,6 +181,8 @@ class IdronautD3(Idronaut):
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Turb', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
+            df['depth'] = df['Press']/0.981
+            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             df["Cond"] = df["Cond"] / 1000
             df["Cond20"] = df["Cond20"] / 1000

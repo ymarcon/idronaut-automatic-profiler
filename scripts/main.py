@@ -56,7 +56,7 @@ def main(server=False, logs=False):
             sensor.quality_assurance(file_path="notes/quality_assurance.json", maintenance_file="notes/events.csv")
             edited_files.extend(sensor.export(directories["Level1"], "L1_LexploreIdronaut_" + deployment))
             sensor.mask_data()
-            sensor.profile_to_timeseries_grid(depth_label="Press")
+            sensor.profile_to_timeseries_grid(depth_label="depth")
             sensor.compute_physical_quantities()
             edited_files.extend(sensor.export(directories["Level2"], "L2_LexploreIdronaut_" + deployment, output_period="monthly",
                           profile_to_grid=True))
