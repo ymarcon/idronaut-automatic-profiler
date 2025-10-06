@@ -31,8 +31,8 @@ class Idronaut(GenericInstrument):
         self.variables = {
             'time': {'var_name': 'time', 'dim': ('time',), 'unit': 'seconds since 1970-01-01 00:00:00',
                      'long_name': 'time'},
-            'Press': {'var_name': 'Press', 'dim': ('time',), 'unit': 'dbar', 'long_name': 'Pressure'},
             'depth': {'var_name': 'depth', 'dim': ('time',), 'unit': 'm', 'long_name': 'water depth'},
+            'Press': {'var_name': 'Press', 'dim': ('time',), 'unit': 'dbar', 'long_name': 'Pressure'},
             'Temp': {'var_name': 'Temp', 'dim': ('time',), 'unit': 'degC', 'long_name': 'temperature'},
             'Cond': {'var_name': 'Cond', 'dim': ('time',), 'unit': 'mS/cm', 'long_name': 'conductivity'},
             'Cond20': {'var_name': 'Cond20', 'dim': ('time',), 'unit': 'mS/cm', 'long_name': 'conductivity at 20deg'},
@@ -119,14 +119,13 @@ class IdronautD1(Idronaut):
     def read_data(self, file):
         self.log.info("Reading data from {}".format(file), 1)
         try:
-            df = pd.read_csv(file, delim_whitespace=True)
+            df = pd.read_csv(file, sep=r"\s+")
             if len(df) < 10:
                 self.log.info("File too short, skipping.".format(file), 2)
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Sal', 'O2%', 'O2ppm', 'pH', 'eH', 'PAR', 'OPTO%', 'OPTOppm', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df['depth'] = df['Press']/0.981
-            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             empty = np.empty((len(df)))
             empty[:] = np.nan
@@ -145,14 +144,13 @@ class IdronautD2(Idronaut):
     def read_data(self, file):
         self.log.info("Reading data from {}".format(file), 1)
         try:
-            df = pd.read_csv(file, delim_whitespace=True)
+            df = pd.read_csv(file, sep=r"\s+")
             if len(df) < 10:
                 self.log.info("File too short, skipping.".format(file), 2)
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df['depth'] = df['Press']/0.981
-            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             df["Cond"] = df["Cond"] / 1000
             df["Cond20"] = df["Cond20"] / 1000
@@ -175,14 +173,13 @@ class IdronautD3(Idronaut):
     def read_data(self, file):
         self.log.info("Reading data from {}".format(file), 1)
         try:
-            df = pd.read_csv(file, delim_whitespace=True)
+            df = pd.read_csv(file, sep=r"\s+")
             if len(df) < 10:
                 self.log.info("File too short, skipping.".format(file), 2)
                 return False
             df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Turb', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
             df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
             df['depth'] = df['Press']/0.981
-            df = df.drop(columns='Press')
             df = df.sort_values(by=['time'])
             df["Cond"] = df["Cond"] / 1000
             df["Cond20"] = df["Cond20"] / 1000
