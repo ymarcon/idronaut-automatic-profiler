@@ -48,15 +48,13 @@ Data ranging from 0m to approx. 60m depth. The profiler is located in the LéXPL
 
 - Clone the repository to your local machine using the command: 
 
- `git clone https://renkulab.io/gitlab/lexplore/idronaut-automatic-profiler.git`
+ `git clone https://github.com/LeXPLORE-Platform/idronaut-automatic-profiler.git`
  
  Note that the repository will be copied to your current working directory.
 
-- Use Python 3 and install the requirements with:
+- Use conda and install the requirements with:
 
- `pip install -r requirements.txt`
-
- The python version can be checked by running the command `python --version`. In case python is not installed or only an older version of it, it is recommend to install python through the anaconda distribution which can be downloaded [here](https://www.anaconda.com/products/individual). 
+`conda env create -f environment.yml`
 
 ## Usage
 

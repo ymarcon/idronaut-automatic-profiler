@@ -1,5 +1,0 @@
-data/*.csv filter=lfs diff=lfs merge=lfs -text
-data/*.nc filter=lfs diff=lfs merge=lfs -text
-data/*.txt filter=lfs diff=lfs merge=lfs -text
-data/*.TOB filter=lfs diff=lfs merge=lfs -text
-data/*.cnv filter=lfs diff=lfs merge=lfs -text
