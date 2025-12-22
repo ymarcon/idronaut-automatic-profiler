@@ -194,3 +194,30 @@ class IdronautD3(Idronaut):
             self.log.info("Failed to read data from {}".format(file), indent=1)
             return False
         return True
+
+
+class IdronautD4(Idronaut):
+    def read_data(self, file):
+        self.log.info("Reading data from {}".format(file), 1)
+        try:
+            df = pd.read_csv(file, sep=r"\s+")
+            if len(df) < 10:
+                self.log.info("File too short, skipping.".format(file), 2)
+                return False
+            df.columns = ['Press', 'Temp', 'Cond', 'Cond20', 'OPTO%', 'OPTOppm', 'pH', 'eH', 'Chl2', 'Chl', 'PhycoEr', 'PhycoCy', 'ACQ.', 'DATE', '&', 'TIME']
+            df['time'] = list(pd.to_datetime(df["ACQ."] + " " + df["DATE"], format='%d/%m/%Y %H:%M:%S.%f', utc=True).values.astype(float) / 10 ** 9)
+            df['depth'] = df['Press']/0.981
+            df = df.sort_values(by=['time'])
+            df["Cond"] = df["Cond"] / 1000
+            df["Cond20"] = df["Cond20"] / 1000
+            empty = np.empty((len(df)))
+            empty[:] = np.nan
+            for variable in self.variables:
+                if variable in df.columns:
+                    self.data[variable] = np.array(df[variable].values)
+                else:
+                    self.data[variable] = empty.copy()
+        except Exception as e:
+            self.log.info("Failed to read data from {}".format(file), indent=1)
+            return False
+        return True

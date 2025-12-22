@@ -6,7 +6,7 @@ import json
 import time
 import argparse
 import requests
-from instruments import IdronautD1, IdronautD2, IdronautD3
+from instruments import IdronautD1, IdronautD2, IdronautD3, IdronautD4
 from general.functions import logger, files_in_directory
 from functions import retrieve_new_files
 
@@ -25,7 +25,7 @@ def main(server=False, logs=False):
     log.begin_stage("Collecting inputs")
     if server:
         log.info("Processing files from sftp server")
-        directories["Level0"] = os.path.join(directories["Level0"], "Deployment3")
+        directories["Level0"] = os.path.join(directories["Level0"], "Deployment4")
         if not os.path.exists(os.path.join(repo, "creds.json")):
             raise ValueError("Credential file required to retrieve live data from the fstp server.")
         with open(os.path.join(repo, "creds.json"), 'r') as f:
@@ -49,6 +49,9 @@ def main(server=False, logs=False):
         elif "Deployment3" in file:
             deployment = "D3"
             sensor = IdronautD3(log=log)
+        elif "Deployment4" in file:
+            deployment = "D4"
+            sensor = IdronautD4(log=log)
         else:
             continue
 
